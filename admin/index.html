@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Admin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style-admin.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid relative top-50 left-50">
+      <a class="navbar-brand" href="../index.html">Live Aqua Beach Resort</a>
+      <div class="d-flex">
+        <a class="btn" href="/index.html">Exit</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login - Administration -->
+  <div id="login" class="d-flex justify-content-center align-items-center mt">
+    <form id="passForm">
+      <div class="text-center mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+        </svg>
+        <h2>Administration</h2>
+      </div>
+
+      <p class="text-center mb-4">Enter the password to access the admin page.</p>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="" aria-describedby="helpId">
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit">Submit</button>
+
+      <p id="passStatus" class="text-center"></p>
+    </form>
+  </div>
+
+<!-- Content tables -->
+<div id="content" class="hidden">
+  <div id="tablets" class="my-3 mx-auto">      
+    <!-- Reservations Table -->
+    <div class="box-style mb-3">
+      <h2 class="table-title mb-3">Reservations</h2>
+      <div class="table-responsive">
+        <table class="table table-striped text-center">
+          <!-- Table Headers -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of People</th>
+              <th>Room</th>
+              <th>Entry</th>
+              <th>Exit</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="reservations"></tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Orders Table -->
+    <div class="box-style mb-3">
+      <h2 class="table-title mb-3">Orders</h2>
+      <div class="table-responsive">
+        <table class="table table-striped text-center">
+          <!-- Table Headers -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Main Course</th>
+              <th>Side</th>
+              <th>Drink</th>
+              <th>Date</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="orders"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Employees Table -->
+    <div class="box-style mb-3">
+      <h2 class="table-title mb-3">Employees</h2>
+      <div class="table-responsive">
+        <table class="table table-striped text-center">
+          <!-- Table Headers -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="employees"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add Employee Form -->
+  <div id="add-employee-container" class="w-75 mb-3 mx-auto d-flex flex-column gap-3 flex-lg-row justify-content-around">
+    <div class="box-style">
+      <button type="button" id="addEmployee" class="btn d-flex flex-column align-items-center justify-content-between">
+        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" fill="#3b5998" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+        </svg>
+        <span>Add Employee</span> 
+      </button>
+    </div>
+    
+    <!-- Employee Form -->
+    <div id="employeeFormContainer" class="box-style hidden">
+      <h3 class="text-center mb-3">New employee information</h3>
+      <form id="employeeForm" class="d-flex flex-column">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="position" class="form-label">Position</label>
+          <select class="form-select" name="position" id="position">
+            <option selected disabled>Select one</option>
+            <option value="waiter">Waiter</option>
+            <option value="cook">Cook</option>
+            <option value="manager">Manager</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" name="address" id="address" class="form-control" placeholder="Enter address" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter phone number" required>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Submit</button>
+
+        <p id="employeeStatus"></p>
+
+        <input type="hidden" id="employeeId" name="employeeId" value="">
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+
+</html>

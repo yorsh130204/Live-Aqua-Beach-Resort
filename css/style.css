@@ -1,0 +1,367 @@
+:root {
+  --primary-bg-color: #3b5998; /* Azul más intenso */
+  --secondary-bg-color: #2a3f5f; /* Azul oscuro */
+  --secondary-heavy-bg-color: #99acbe; /* Gris azulado */
+  --third-bg-color: #848484; /* Gris */
+
+  --primary-text-color: #d4e2ef; /* Texto principal claro */
+  --secondary-text-color: #f5f5f5; /* Texto secundario claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hotel {
+  font-weight: bold;
+  color: var(--secondary-bg-color);
+}
+
+nav {
+  background-color: var(--primary-bg-color);
+
+}
+
+nav .navbar-nav .nav-item:nth-child(1){
+  border-bottom: 1px solid #fff;
+}
+
+nav .navbar-nav .nav-item:hover:nth-child(2){
+  border-bottom: 1px solid #fff;
+}
+
+nav .navbar-nav .nav-item:hover:nth-child(3){
+  border-bottom: 1px solid #fff;
+}
+
+nav .navbar-toggler {
+  background-color: var(--secondary-bg-color);
+}
+
+nav .navbar-toggler:hover {
+  background-color: var(--secondary-heavy-bg-color);
+}
+
+nav .navbar-brand {
+  font-size: xx-large;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
+  margin-right: 150px;
+}
+
+nav .navbar-nav .nav-item .nav-link{
+  color: var(--secondary-text-color);
+}
+
+nav .btn {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color)
+}
+
+nav .btn:hover {
+  background-color: var(--secondary-heavy-bg-color);
+  color: var(--secondary-text-color);
+}
+
+
+#hero {
+  background-image: url(../public/img-index/img-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+  box-sizing: border-box;
+  height: 95vh;
+  position: relative;
+  animation: bg-hero 10s infinite ease;
+  -webkit-animation: bg-hero 10s infinite ease;
+}
+
+#hero #icon-arrow {
+  position: absolute;
+  bottom: 70px;
+  animation: icon-arrow 1s infinite ease;
+  -webkit-animation: icon-arrow 1s infinite linear;
+}
+
+#hero #icon-arrow a {
+  color: var(--primary-bg-color);
+}
+
+
+
+.img-sponsor {
+  max-width: 10%;
+  height: 10%;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+.img-sponsor:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+#about-us {
+  background-image: linear-gradient(-45deg, #3b5998 50%, #2a3f5f 50%); /* Gradiente azul */
+  color: var(--secondary-text-color); /* Texto secundario claro */
+}
+
+#about-us img {
+  margin: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+#about-us img:hover {
+  scale: 1.05;
+}
+
+#about-us div {
+  width: 50%;
+}
+
+#about-us h2 {
+  font-size: 48px;
+}
+
+#about-us p {
+  font-size: 20px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+
+#characteristics  {
+}
+
+#characteristics .card {
+  width: 25%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+
+#characteristics .card:hover {
+  scale: 1.05;
+}
+
+#characteristics .card-text {
+  text-align: justify;
+}
+
+
+#bedrooms-container {
+  background-image: linear-gradient(-45deg, #3b5998 50%, #2a3f5f 50%); /* Gradiente azul */
+  color: var(--secondary-text-color);
+}
+
+#bedrooms-container h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+#bedrooms-container .rooms img {
+  max-width: 40%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 1s;
+}
+
+#bedrooms-container .rooms img:hover {
+  scale: 1.05;
+}
+
+#bedrooms-container .room-text {
+  width: 50%;
+}
+
+#bedrooms-container .room-text h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+#bedrooms-container .room-text .capacity {
+  font-size: 24px;
+}
+
+#bedrooms-container .room-text .info-bedroom {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  text-transform: capitalize;
+ 
+}
+
+#reservation-container {
+  background-color: var(--third-bg-color);
+}
+
+#reservation-container p {
+  color: var(--secondary-text-color);
+  font-size: 20px;
+}
+
+#reservation-container #reservation-link {
+  color: var(--secondary-text-color);
+  font-weight: bold;
+}
+
+
+footer {
+  color: #fff;
+}
+
+footer h6 {
+  border-bottom: 1px solid #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+footer p {
+  font-weight: 400;
+}
+
+footer #footer-company {
+  width: 25%;
+  text-align: justify;
+}
+
+footer #footer-social {
+  background-color: #001d3d;
+}
+
+footer #footer-information {
+  background-color: var(--secondary-bg-color);
+}
+
+footer #footer-services a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+/* Movil sytles */
+@media only screen and (max-width: 600px) {
+  #hero {
+    padding: 50px;
+    background-size: cover; 
+    background-position: left;
+    animation: none; 
+    -webkit-animation: none; 
+  }
+
+  #hero h2 {
+    font-size: 56px;
+  }
+
+  .img-sponsor {
+    max-width: 40%;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+  }
+
+  #about-us img {
+    max-width: 85%;
+  }
+  
+  #about-us div {
+    width: 75%;
+  }
+
+  #about-us h2 {
+    font-size: 36px;
+  }
+  
+  #about-us p {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  #characteristics .card {
+    width: 75%;
+  }
+
+  #bedrooms-container .room-text {
+    width: 75%;
+  }
+
+  #bedrooms-container .rooms img {
+    max-width: 85%;
+
+  }
+
+  #reservation-container p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  footer #footer-company {
+    width: 100%;
+    text-align: justify;
+  }
+
+  footer #footer-services {
+    width: 100%;
+  }
+
+  footer #footer-contact {
+    width: 100%;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+
+}
+
+/* Laptop styles */
+@media (min-width: 1024px) {
+
+}
+
+/* Styles for large screens (e.g. desktop monitors) */
+@media (min-width: 1200px) {
+
+}
+
+@keyframes bg-hero {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes icon-arrow {
+  0% {
+    bottom: 60px;
+  }
+  50% {
+    bottom: 70px;
+  }
+  100% {
+    bottom: 60px;
+  }
+}

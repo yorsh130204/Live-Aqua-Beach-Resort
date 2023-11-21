@@ -1,0 +1,23 @@
+{
+  "name": "web-hotel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "serve": "json-server --watch db.json --port 3001",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "axios": "^1.6.1",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
+    "json-server": "^0.17.4"
+  }
+}

@@ -1,0 +1,188 @@
+:root {
+  --primary-bg-color: #3b5998; /* Azul más intenso */
+  --secondary-bg-color: #2a3f5f; /* Azul oscuro */
+  --secondary-heavy-bg-color: #99acbe; /* Gris azulado */
+  --third-bg-color: #848484; /* Gris */
+
+  --primary-text-color: #d4e2ef; /* Texto principal claro */
+  --secondary-text-color: #f5f5f5; /* Texto secundario claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+  body,html {
+    background-image: url(../public/Img-reservations/img-bg.jpg);
+  }
+  
+  .hotel {
+    font-weight: bold;
+  }
+  
+  nav {
+    background-color: var(--primary-bg-color);
+  
+  }
+
+  nav .navbar-nav .nav-item:hover:nth-child(1){
+    border-bottom: 1px solid #fff;
+  }
+
+  nav .navbar-nav .nav-item:nth-child(2){
+    border-bottom: 1px solid #fff;
+  }
+
+  nav .navbar-nav .nav-item:hover:nth-child(3){
+    border-bottom: 1px solid #fff;
+  }
+  
+  nav .navbar-toggler {
+    background-color: var(--secondary-bg-color);
+  }
+  
+  nav .navbar-toggler:hover {
+    background-color: var(--secondary-heavy-bg-color);
+  }
+  
+  nav .navbar-brand {
+    font-size: xx-large;
+    text-transform: capitalize;
+    color: var(--secondary-text-color);
+    margin-right: 150px;
+  }
+  
+  nav .navbar-nav .nav-item .nav-link{
+    color: var(--secondary-text-color);
+  }
+  
+  nav .btn {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color)
+  }
+  
+  nav .btn:hover {
+    background-color: var(--secondary-heavy-bg-color);
+    color: var(--secondary-text-color);
+  }
+  
+
+  #reservation-container {
+    height: 100%;
+    width: 100%;
+}
+
+  #reservation-container #reservation-card {
+    width: 75%;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-heavy-bg-color);
+    background-image: linear-gradient(-45deg, #3b5998 50%, #2a3f5f 50%); /* Gradiente azul */
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#reservationForm label {
+    font-weight: 500;
+}
+
+#reservation-card img {
+    width: 50%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#reservation-card #card-total {
+    font-weight: 600;
+}
+
+#reservation-card #card-total span {
+    font-weight: 700;
+}
+
+#reservation-card #card-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #58a6ff; /* Color de fondo principal */
+  border: 1px solid #0e5ab4; /* Borde */
+  color: #ffffff; /* Color del texto */
+}
+
+#reservation-card #card-button:hover {
+  background-color: #0e5ab4; /* Cambio de color al pasar el mouse */
+  border: 1px solid #072b60; /* Cambio de borde al pasar el mouse */
+}
+
+footer {
+  color: #fff;
+}
+
+footer h6 {
+  border-bottom: 1px solid #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+footer p {
+  font-weight: 400;
+}
+
+footer #footer-company {
+  width: 25%;
+  text-align: justify;
+}
+
+footer #footer-social {
+  background-color: #001d3d;
+}
+
+footer #footer-information {
+  background-color: var(--secondary-bg-color);
+}
+
+footer #footer-services a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Movil sytles */
+@media only screen and (max-width: 600px) {
+ 
+  #reservation-container #reservation-card {
+    width: 95%;
+  }
+
+  #reservation-card img {
+    width: 100%;
+  }
+
+  footer #footer-company {
+    width: 100%;
+    text-align: justify;
+  }
+
+  footer #footer-services {
+    width: 100%;
+  }
+
+  footer #footer-contact {
+    width: 100%;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+
+}
+
+/* Laptop styles */
+@media (min-width: 1024px) {
+
+}
+
+/* Styles for large screens (e.g. desktop monitors) */
+@media (min-width: 1200px) {
+
+}

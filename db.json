@@ -1,0 +1,35 @@
+{
+  "reservations": [
+    {
+      "name": "Jorge Alberto Valenzuela Castañon",
+      "email": "jorge130204@gmail.com",
+      "people": "6",
+      "entry": "2023-11-08T15:14",
+      "exit": "2023-11-19T15:14",
+      "room": "deluxe",
+      "total": 6050,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "name": "Jorge Alberto Valenzuela Castañon",
+      "mainCourse": "steak",
+      "side": "salad",
+      "drink": "beer",
+      "total": 34,
+      "date": "2023-11-20T21:15:13.190Z",
+      "id": 1
+    }
+  ],
+  "employees": [
+    {
+      "name": "Jorge Alberto Valenzuela Castañon",
+      "position": "manager",
+      "address": "Ave López Luna 8859",
+      "phone": "54519856",
+      "employeeId": "",
+      "id": 1
+    }
+  ]
+}

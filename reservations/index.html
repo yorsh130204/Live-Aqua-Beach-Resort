@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Reservations</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/public/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style-reservations.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid relative top-50 left-50">
+      <a class="navbar-brand" href="../index.html">Live Aqua Beach Resort</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/reservations/index.html">Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/restaurant/index.html">Restaurant</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn" href="/admin/index.html">Admin</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="reservation-container" class="d-flex align-items-center justify-content-center my-5">
+    <div id="reservation-card" class="d-flex flex-column flex-lg-row justify-content-around align-items-center gap-5 p-5">
+      <img src="../public/Img-reservations/img-1.jpg" alt="" style="height: 580px;">
+      <div id="reservation-card-text">
+        <div id="card-header">
+          <h1>Reservations at Live Aqua</h1>
+          <p>
+            Reserve a table at our exquisite restaurants. We'll reach out to confirm your booking and make your Live Aqua experience unforgettable.
+          </p>
+        </div>
+        <form id="reservationForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name:</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="yourname@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="people" class="form-label">Number of Guests:</label>
+            <input type="number" name="people" id="people" min="1" max="6" class="form-control" placeholder="Number of Guests" required>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="entry" class="form-label">Arrival Date:</label>
+              <input type="datetime-local" name="entry" id="entry" class="form-control" placeholder="" required>
+            </div>
+            <div class="col">
+              <label for="exit" class="form-label">Departure Date:</label>
+              <input type="datetime-local" name="exit" id="exit" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="room">Preferred Room:</label>
+            <select class="form-select" id="room" name="room">
+                <option selected disabled>Select one</option>
+                <option value="single">Single Room</option>
+                <option value="deluxe">Deluxe Room</option>
+            </select>
+          </div>                 
+          <div id="card-total">
+            <p>Total: <span id="total"></span></p>
+          </div>
+          <button id="card-button" class="btn" type="submit">Make Reservation</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+  <!-- <main>
+    
+    <div id="status"></div>
+  </main> -->
+
+  <footer>
+    <div id="footer-information" class="d-flex flex-column flex-lg-row justify-content-around align-items-center px-2 py-4">
+      <div id="footer-company">
+        <h6>Live Aqua Beach Resort</h6>
+        <p>Live Aqua Beach Resort is a luxurious hotel located in Cancun, known for its exquisite amenities and stunning oceanfront views. The resort offers an array of facilities, including multiple pools, spa services, fine dining restaurants, and exclusive lounges, ensuring an unforgettable experience for its guests.</p>
+      </div>
+      <div id="footer-services">
+        <h6>Services</h6>
+        <p><a href="/index.html">Home</a></p>
+        <p><a href="/restaurant/index.html">Restaurants</a></p>
+        <p><a href="/reservations/index.html">Reservations</a></p>
+      </div>
+      <div id="footer-contact">
+        <h6>Contact</h6>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+          </svg>
+          Blvd. Kukulcan KM. 12.5, Zona Hotelera, 77500 Cancún, Q.R., Mexico
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+          </svg>
+          info@liveaquacancun.com
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+          </svg>
+          +52 (998) 123 4567
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="reservations.js"></script>
+</body>
+
+</html>
