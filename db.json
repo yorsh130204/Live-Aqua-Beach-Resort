@@ -9,6 +9,16 @@
       "room": "deluxe",
       "total": 6050,
       "id": 1
+    },
+    {
+      "name": "Juan Daniel Guerrero Dominguez",
+      "email": "jorge130204@gmail.com",
+      "people": "2",
+      "entry": "2023-11-21T09:26",
+      "exit": "2023-11-29T09:26",
+      "room": "single",
+      "total": 1200,
+      "id": 2
     }
   ],
   "orders": [
@@ -20,6 +30,15 @@
       "total": 34,
       "date": "2023-11-20T21:15:13.190Z",
       "id": 1
+    },
+    {
+      "name": "Juan Daniel Guerrero Dominguez",
+      "mainCourse": "steak",
+      "side": "soup",
+      "drink": "water",
+      "total": 29,
+      "date": "2023-11-21T15:26:31.441Z",
+      "id": 2
     }
   ],
   "employees": [
